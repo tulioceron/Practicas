@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>App Agenda</title>
+<link href="css/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="js/API/eventos.js" type="text/javascript"></script>
+<script src="js/API/captura.js" type="text/javascript"></script>
+<script src="js/API/leer.js" type="text/javascript"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+    	<a data-role="button" href="#Crear" class="ui-btn-right">
+            Crear
+        </a>
+		<h1>AGENDA</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview" data-inset="true" data-theme="e">
+        	<a data-role="button" href="#leer">
+            Leer
+          	</a>
+			
+            
+		</ul>		
+	</div>
+	
+</div>
+
+<div data-role="page" id="Crear">
+	<div data-role="header">
+    	<h1>EVENTO</h1>
+	</div>
+    <div data-role="content">
+    <div data-role="fieldcontain">
+            <label for="textinput1">
+                Evento
+            </label>
+            <input name="" id="evento" placeholder="" value="" type="text">
+        </div>
+        <div data-role="fieldcontain">
+            <label for="textarea1">
+                Descripción
+            </label>
+            <textarea name="" id="descripcion" placeholder=""></textarea>
+        </div>
+        <a href="#" data-role="button" id="tomarFoto" style="height:150px" data-theme="c" style="font-style:italic">Tomar foto</a>
+        <a href="#" data-role="button" id="Registrar" data-theme="b">Registrar</a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
