@@ -2,7 +2,8 @@
 
 function leer(){
 	var db = window.openDatabase("agenda", "1.0", "Agenda BD", 5000000);
-	db.executeSql('SELECT * FROM eventos',[],
+	db.transaction(function(tx){
+	tx.executeSql('SELECT * FROM eventos',[],
 		function(tx1,resultado)
 		{
 			var largo = resultado.rows.length;
@@ -19,4 +20,5 @@ function leer(){
 					}
 			}
 		});
+	});
 }

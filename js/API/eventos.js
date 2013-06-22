@@ -1,6 +1,7 @@
 //Eventos
 $(document).ready(function(){
 	document.addEventListener("deviceready", function(){
+	leer();
 		
 		$('#tomarFoto').tap(function(){
 			tomarFoto();
@@ -20,7 +21,7 @@ $(document).ready(function(){
 				$('#descripcion').val('');
 				$('#tomarFoto').attr('rel','');	
 				window.location.href="#page";
-				}, 'Error de Registro', 'Aceptar');});
+				}, 'OK todo en orden', 'Aceptar');});
 			
 			}
 			else{	navigator.notification.alert('Nombre del evento requerido', null, 'Error de Registro', 'Aceptar');
