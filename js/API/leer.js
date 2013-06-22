@@ -4,7 +4,7 @@ function leer(){
 	var db = window.openDatabase("agenda", "1.0", "Agenda BD", 5000000);
 	db.transaction(function(tx){
 	tx.executeSql('SELECT * FROM eventos',[],
-		function(tx1,resultado)
+		function(tx,resultado)
 		{
 			var largo = resultado.rows.length;
 			if(largo!=0)
