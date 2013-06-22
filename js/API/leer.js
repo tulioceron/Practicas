@@ -8,18 +8,14 @@ function leer(){
 			var largo = resultado.rows.length;
 			if(largo!=0)
 			{
-				$('#eventos div[data-role=content]').html('');
+				$('#page div[data-role=content]').html('');
 				for(i=0;i<largo;i++)
 					{
-					$('#eventos div[data-role=content]').append('<div data-role="collapsible-set">'+
-				'<div data-role="collapsible" data-collapsed="true">'+
-					'<h3>'+
-						resultado.rows.item(i).evento+
-					'</h3>'+
-					'Desscripción: '+resultado.rows.item(i).descripcion+'<br />'+
+					$('#page div[data-role=content] ul').append('<li>'+
+					'Evento: '+resultado.rows.item(i).evento+'<br />'+
+					'Descripción: '+resultado.rows.item(i).descripcion+'<br />'+
 					'Foto: '+resultado.rows.item(i).fotos+
-				'</div>'+
-			'</div>');
+					'</li>');
 					}
 			}
 		});
